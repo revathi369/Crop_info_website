@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="cstyle2.css">
+</head>
+<body>
+   <button style="margin-left: 20px; background-color: #ffffff;" onclick="window.history.back()"><img style="width: 50px;height: 50px;" src="images/arr.png"></button>    
+
+<div class="container">
+    <input type="text" placeholder="search for Grains🌾" id="search-box">
+ 
+    <div class="image-container">
+ 
+       <div class="image" data-title="Oats">
+          <img src="images/city-1.jpg" alt="">
+          <h3>Oats (Rs.16.00/kg)<hr>Area - Rayalaseema<hr>Rating ★★★</h3>
+       </div>
+       
+       <div class="image" data-title="Rice">
+        <img src="images/rice.png" alt="">
+        <h3>Rice (Rs.36.00/kg)<hr>West Godavari<hr>Rating ★★★★</h3>
+       </div>
+
+       <div class="image" data-title="Barley">
+        <img src="images/barley.png" alt="">
+        <h3>Barley (Rs.96.00/kg)<hr>Area - Madhya Pradesh<hr>Rating ★★★</h3>
+      </div>
+      <div class="image" data-title="Wheat">
+        <img src="images/wheat.png" alt="">
+        <h3>wheat(Rs.26.00/kg)<hr>Area - Maharashtra<hr>Rating ★★★</h3>
+      </div>
+
+    </div>
+ 
+ </div>
+ 
+ <script>
+ 
+ let searchBox = document.querySelector('#search-box');
+ let images = document.querySelectorAll('.container .image-container .image');
+ 
+ searchBox.oninput = () =>{
+    images.forEach(hide => hide.style.display ='none');
+    let value = searchBox.value;
+    images.forEach(filter =>{
+       let title = filter.getAttribute('data-title');
+       if(value == title){
+          filter.style.display = 'block';
+       }
+       if(searchBox.value == ''){
+          filter.style.display = 'block';
+       }
+    });
+ };
+ 
+ </script>
+ 
+</body>
+</html>

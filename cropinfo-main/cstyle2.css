@@ -1,0 +1,123 @@
+*{
+   font-family: 'Verdana', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: all .2s linear;
+}
+body {
+  background-image: url('images/back.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container{
+  padding:25px 10%;
+  text-align: center;
+}
+
+.container .heading{
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+
+.container #search-box{
+  width: 600px;
+  border:3px solid rgb(0, 0, 0);
+  padding:12px 15px;
+  font-size: 20px;
+  border-radius: 20%;
+}
+
+.container .image-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:20px;
+  padding-top: 30px;
+}
+
+.container .image-container .image{
+  padding:15px;
+  background-color: #246926;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  border:2px solid #000;
+  width: 350px;
+  border-radius: 5px;
+  animation: fadeIn .2s linear;
+  transition: transform .3s;
+}
+.container .image-container .image:hover{
+  transform: scale(1.1);
+}
+@keyframes fadeIn {
+  0%{
+    transform: scale(.5) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+.container .image-container .image img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.container .image-container .image h3{
+  font-size: 20px;
+}
+
+@media (max-width:768px){
+  .container #search-box{
+    width: 100%;
+  }
+}
+
+@media (max-width:450px){
+  .container{
+    padding:25px 20px;
+  }
+  .container .image-container .image{
+    width: 100%;
+  }
+}
+
+nav .logo{
+  width: 500px;
+  cursor: pointer;
+}
+
+nav ul{
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+  font-size: 30px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+nav ul button{
+  background: #efefef;
+  height: 30px;
+  width: 60px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+  border-radius: 30px;
+}
